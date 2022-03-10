@@ -4,8 +4,8 @@
 @section('title', 'comics')
     
 @section('content')
-    <main>
-        @dd($comics)
-        
-    </main>
+    
+    
+    @dd($comics)
+    
 @endsection
