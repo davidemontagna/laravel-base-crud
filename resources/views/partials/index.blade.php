@@ -5,6 +5,7 @@
     
 @section('content')    
     
+<section>
     <table class="table">
         <thead>
         <tr>
@@ -34,6 +35,7 @@
             <td>{{$comic->type}}</td>
             <td>
                 <a href="{{route("comics.show", $comic->id)}}"><button type="button" class="btn btn-info">Show</button></a>
+                
             </td>
            
         </tr>
@@ -42,5 +44,6 @@
         
         </tbody>
     </table>
-    
+    <a href="{{route("comics.create", $comic->id)}}"><button type="button" class="btn btn-info">Inserisci nuovo</button></a>
+</section>
 @endsection
