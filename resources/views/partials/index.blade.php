@@ -35,7 +35,13 @@
             <td>{{$comic->type}}</td>
             <td>
                 <a href="{{route("comics.show", $comic->id)}}"><button type="button" class="btn btn-info">Show</button></a>
+                <a href="{{route("comics.edit", $comic->id)}}"><button type="button" class="mt-2 btn btn-success">Edit</button></a>
+                <form action="{{route("comics.destroy", $comic->id)}}" method="POST">
+                @csrf
+                @method("DELETE")
                 
+                    <input class="mt-2 btn btn-danger" type="submit" value="Delete">
+                </form>
             </td>
            
         </tr>
@@ -44,6 +50,6 @@
         
         </tbody>
     </table>
-    <a href="{{route("comics.create", $comic->id)}}"><button type="button" class="btn btn-info">Inserisci nuovo</button></a>
+    <a href="{{route("comics.create", $comic->id)}}"><button type="button" class="mb-5 btn btn-dark">Inserisci nuovo</button></a>
 </section>
 @endsection
