@@ -8,6 +8,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    @include('partials.main')
+    @yield('partials.index')
 </body>
 </html>
